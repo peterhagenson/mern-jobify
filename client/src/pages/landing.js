@@ -1,6 +1,7 @@
 import main from '../assets/images/main.svg'
 import Wrapper from '../assets/wrappers/Testing'
 import { Logo } from '../components'
+import { Link } from 'react-router-dom'
 
 
 const Landing = () => {
@@ -17,9 +18,9 @@ const Landing = () => {
                     <p>
                         I'm baby vexillologist lomo blog skateboard forage hoodie tonx, leggings church-key health goth small batch master cleanse. Artisan church-key sriracha, vaporware yr hoodie everyday carry. XOXO taiyaki letterpress chia occupy, enamel pin activated charcoal food truck blue bottle cornhole gluten-free keffiyeh messenger bag drinking vinegar af. Tote bag snackwave literally vegan praxis forage bitters activated charcoal.
                     </p>
-                    <button className='btn btn-hero'>Login/Register
+                    <Link to='/register' className='btn btn-hero'>Login/Register
 
-                    </button>
+                    </Link>
 
                 </div>
                 <img src={main} alt='job hunt' className='img main-img' />
