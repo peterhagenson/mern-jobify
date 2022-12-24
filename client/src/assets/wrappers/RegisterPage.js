@@ -32,4 +32,4 @@ const Wrapper = styled.section`
     letter-spacing: var(--letterSpacing);
   }
 `
-export default Wrapper
+export { Wrapper } 
