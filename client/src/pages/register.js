@@ -43,7 +43,8 @@ const Register = () => {
                 <FormRow type='password' name='password' value={values.password} handleChange={handleChange} />
                 <button type="submit" className="btn btn-block" >submit</button>
                 <p>
-                    <button type='button' onClick={toggleMember} className='member-btn'>Register</button>
+                    {values.isMember ? 'Not a member yet?' : 'Already a member?'}
+                    <button type='button' onClick={toggleMember} className='member-btn'>{values.isMember ? 'Register' : 'Login'}</button>
                 </p>
             </form>
         </Wrapper >
