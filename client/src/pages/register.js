@@ -15,6 +15,10 @@ const Register = () => {
     const [values, setValues] = useState(initialState);
     //global state and useNavigate
 
+    const toggleMember = () => {
+        setValues({ ...values, isMember: !values.isMember })
+    }
+
     const handleChange = (e) => {
         console.log(e.target)
     }
@@ -36,6 +40,9 @@ const Register = () => {
                 {/*email input */}
                 <FormRow type='password' name='password' value={values.password} handleChange={handleChange} />
                 <button type="submit" className="btn btn-block" >submit</button>
+                <p>
+                    <button type='button' onClick={toggleMember} className='member-btn'>Register</button>
+                </p>
             </form>
         </Wrapper >
 
