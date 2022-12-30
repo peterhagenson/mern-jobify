@@ -1,0 +1,1 @@
+const connectionString = 'mongodb+srv://peter:<Rollerskateskinny*1>@node-express-project.vr9f7cf.mongodb.net/jobify?retryWrites=true&w=majority' 
