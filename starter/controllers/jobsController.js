@@ -1,5 +1,5 @@
 const createJob = async (req, res) => {
-    res.send('register user')
+    res.send('create job')
 }
 
 const getAllJobs = async (req, res) => {
