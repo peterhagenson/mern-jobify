@@ -1,22 +1,23 @@
 import User from '../models/user.js'
 
 const register = async (req, res) => {
-    console.log(req.body)
+    console.log("in register", req.body)
     try {
         const user = await User.create(req.body)
-        console.log(req.body)
+
         res.status(201).json({ user })
+        console.log(user)
     } catch (error) {
-        res.status(500).json({ msg: 'there was an error' })
+        res.status(500).json({ msg: 'there was an error test' })
     }
 }
 
 
-const login = (req, res) => {
+const login = async (req, res) => {
     res.send('login user')
 }
 
-const updateUser = (req, res) => {
+const updateUser = async (req, res) => {
     res.send('updateUser')
 }
 
