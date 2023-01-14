@@ -1,6 +1,8 @@
 import React, { useReducer, useContext } from "react";
 import reducer from './reducer';
-import { DISPLAY_ALERT, CLEAR_ALERT } from "./actions";
+import {
+    DISPLAY_ALERT, CLEAR_ALERT, REGISTER_USER_BEGIN, REGISTER_USER_ERROR, REGISTER_USER_SUCCESS
+} from "./actions";
 
 
 
@@ -9,6 +11,9 @@ const initialState = {
     showAlert: false,
     alterText: '',
     alterType: '',
+    user: null,
+    token: null,
+    userLocation: '',
 }
 
 const AppContext = React.createContext()
@@ -27,11 +32,21 @@ const AppProvider = ({ children }) => {
             dispatch({ type: CLEAR_ALERT })
         }, 3000)
     }
-    return (<AppContext.Provider value={{ ...state, displayAlert }}>{children}</AppContext.Provider>
+
+    const registerUser = async (currentUser) => {
+        console.log("in registerUser")
+        console.log(currentUser)
+    }
+
+    return (<AppContext.Provider value={{ ...state, displayAlert, registerUser }}>{children}</AppContext.Provider>
     )
 }
+
+
 
 const useAppContext = () => {
     return useContext(AppContext)
 }
-export { AppProvider, initialState, useAppContext }
+export {
+    AppProvider, initialState, useAppContext
+}
